@@ -89,7 +89,7 @@ namespace GQTSS
 
                 document.SetFont(font);
                 document.SetTextAlignment(TextAlignment.CENTER);
-                
+
 
                 ImageData imageData = ImageDataFactory.Create("Images/gq.png");
                 Image image = new Image(imageData);
@@ -128,25 +128,10 @@ namespace GQTSS
                     table.AddCell(player.SignatureBox);
                 }
 
-                table.AddCell(".");
-                table.AddCell("");
-                table.AddCell("");
-                table.AddCell("");
-
-                table.AddCell(". ");
-                table.AddCell(" ");
-                table.AddCell(" ");
-                table.AddCell(" ");
-
-                table.AddCell(". ");
-                table.AddCell(" ");
-                table.AddCell(" ");
-                table.AddCell(" ");
-
-                table.AddCell(". ");
-                table.AddCell(" ");
-                table.AddCell(" ");
-                table.AddCell(" ");
+                CreateEmptyRow(table);
+                CreateEmptyRow(table);
+                CreateEmptyRow(table);
+                CreateEmptyRow(table);
 
                 document.Add(table);
 
@@ -161,6 +146,14 @@ namespace GQTSS
                 File.WriteAllBytes($@"../{homeTeam.TeamName}.pdf", bytes);
 
             }
+        }
+
+        private static void CreateEmptyRow(Table table)
+        {
+            table.AddCell(".");
+            table.AddCell("");
+            table.AddCell("");
+            table.AddCell("");
         }
 
         private static Document CreateMvpTable(Document document)

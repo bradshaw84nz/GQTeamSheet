@@ -7,7 +7,7 @@ namespace GQTSS
     {
         static void Main(string[] args)
         {
-            GenerateFromFile("<Filename>", "31st August 2019");
+            GenerateFromFile("<Filename>", "Round 4 - 31st August 2019");
         }
         private static void GenerateFromFile(string fileName,
                                              string dateField)
