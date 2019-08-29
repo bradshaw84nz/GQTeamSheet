@@ -16,7 +16,7 @@ namespace GQTSS
             string[] fileContent;
             try
             {
-                fileContent = File.ReadAllLines("../revolutionise-GridironQueenslandInc-Signon-Sheet (48).csv");
+                fileContent = File.ReadAllLines("/Users/chris/Downloads/revolutionise-GridironQueenslandInc-Signon-Sheet (48).csv");
                 
                 ts.GenerateTeamsheet(fileContent,
                                     dateField);
