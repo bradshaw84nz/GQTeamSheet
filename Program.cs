@@ -7,7 +7,10 @@ namespace GQTSS
     {
         static void Main(string[] args)
         {
-            GenerateFromFile("<Filename>", "Round 4 - 31st August 2019");
+            GenerateFromFile("/Users/cbradshaw/Downloads/revolutionise-GridironQueenslandInc-Signon-Sheet.csv", "Round 4 - 31st August 2019");
+            GenerateFromFile("/Users/cbradshaw/Downloads/revolutionise-GridironQueenslandInc-Signon-Sheet-2.csv", "Round 4 - 31st August 2019");
+            GenerateFromFile("/Users/cbradshaw/Downloads/revolutionise-GridironQueenslandInc-Signon-Sheet-3.csv", "Round 4 - 31st August 2019");
+            GenerateFromFile("/Users/cbradshaw/Downloads/revolutionise-GridironQueenslandInc-Signon-Sheet-4.csv", "Round 4 - 31st August 2019");
         }
         private static void GenerateFromFile(string fileName,
                                              string dateField)
@@ -16,7 +19,7 @@ namespace GQTSS
             string[] fileContent;
             try
             {
-                fileContent = File.ReadAllLines("/Users/chris/Downloads/revolutionise-GridironQueenslandInc-Signon-Sheet (48).csv");
+                fileContent = File.ReadAllLines(fileName);
                 
                 ts.GenerateTeamsheet(fileContent,
                                     dateField);
