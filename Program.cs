@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using GQTeamsheet;
 
 namespace GQTSS
 {
@@ -7,10 +8,9 @@ namespace GQTSS
     {
         static void Main(string[] args)
         {
-            GenerateFromFile("/Users/cbradshaw/Downloads/revolutionise-GridironQueenslandInc-Signon-Sheet.csv", "Round 4 - 31st August 2019");
-            GenerateFromFile("/Users/cbradshaw/Downloads/revolutionise-GridironQueenslandInc-Signon-Sheet-2.csv", "Round 4 - 31st August 2019");
-            GenerateFromFile("/Users/cbradshaw/Downloads/revolutionise-GridironQueenslandInc-Signon-Sheet-3.csv", "Round 4 - 31st August 2019");
-            GenerateFromFile("/Users/cbradshaw/Downloads/revolutionise-GridironQueenslandInc-Signon-Sheet-4.csv", "Round 4 - 31st August 2019");
+            //GenerateFromFile("/Users/cbradshaw/Downloads/revolutionise-GridironQueenslandInc-Signon-Sheet.csv", "Round 4 - 31st August 2019");
+            var dc = new DriveClient();
+            dc.CreateFolder();
         }
         private static void GenerateFromFile(string fileName,
                                              string dateField)
